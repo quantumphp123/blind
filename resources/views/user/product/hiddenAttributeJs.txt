@@ -1,0 +1,14 @@
+
+          let main = document.querySelector('#main')
+          main.textContent = ''
+          response['fabric'].forEach(attribute => {
+            if (attribute['type'] == "checkbox") {
+              let div = document.createElement('div')
+              let heading = document.createElement('h6')
+              heading.textContent = attribute['heading']
+              div.append(heading)
+              main.append(div)
+
+              console.log(attribute['content'])
+              // let checkbox = document.createElement('input')
+              // checkbox.setAttribute('type', 'checkbox')
